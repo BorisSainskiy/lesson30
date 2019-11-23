@@ -8,7 +8,9 @@ title1.addEventListener("click", e => {
     let td = arr[i].querySelector("td");
     arrOfNumber.push(td.innerText);
   }
-  arrOfNumber.sort();
+  arrOfNumber.sort((a, b) => {
+    return a - b;
+  });
   for (let i = 1; i < arr.length; i++) {
     let td = arr[i].querySelector("td");
     td.innerText = arrOfNumber[i - 1];
